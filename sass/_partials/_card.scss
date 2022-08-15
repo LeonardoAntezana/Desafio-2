@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontPrincipal;
+}
+
+body{
+    height: 100vh;
+    background-color: $paleBlue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    .card{
+        width: 600px;
+        max-width: 90%;
+        .card__conteiner{
+            width: auto;   
+            &__image{
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+                height: 100%;
+                width: 100%;
+                display: block;
+            }
+        }
+        .card__content{
+            padding: 1.5rem 2rem;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            height: 23rem;
+            justify-content: space-between;
+
+            .title{
+                text-align: center;
+            }
+            .card__content__p{
+                opacity: 0.5;
+                text-align: center;
+                
+            }
+            .card__options{
+                padding: 1rem;
+                border-radius: 1rem;
+                background-color: $veryPaleBlue;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &__left{
+                    display: flex;
+                    align-items: center;
+                    .card__options__plan{
+                        margin-left: 2rem;
+                        display: flex;
+                        flex-direction: column;
+                    .plan{
+                        font-weight: 900;
+                        }
+                    .precio{
+                        opacity: 0.5;
+                        }
+                    }
+                }
+                
+                .change{
+                    color: $brightBlue;
+                    font-weight: 700;
+                    text-decoration: underline;
+                }
+            }
+            .proceed{
+                display: block;
+                border: none;
+                background-color: $brightBlue;
+                color: white;
+                font-weight: 600;
+                padding: 1rem 0;
+                border-radius: 0.5rem;
+                width: 100%;
+                transition: background-color 1s ease;
+                &:hover{
+                    background-color: hsl(245, 74%, 58%);
+                }
+            }
+            .cancel{
+                display: block;
+                border:none;
+                font-weight: 600;
+                background-color: transparent;
+                color: gray;
+                padding: 0;
+            }
+        }   
+    }
+}
+
+
+@media screen and (min-width:1040px){
+    body{
+        .card{
+
+        }
+    }
+}
